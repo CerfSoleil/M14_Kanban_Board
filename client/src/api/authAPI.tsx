@@ -1,7 +1,6 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
 const login = async (userInfo: UserLogin) => {
-  // POST request to the login route
   try{
     const response = await fetch('/auth/login', {
       method: 'POST',
@@ -23,7 +22,5 @@ const login = async (userInfo: UserLogin) => {
     return Promise.reject('Could not retrieve user information');
   }
 };
-
-
 
 export { login };
